@@ -1,0 +1,16 @@
+# Local runtime state and sensitive browser artifacts
+state/
+logs/*.json
+logs/audit/*.jsonl
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+
+# Keep source scripts, docs, schemas, and context registry tracked intentionally.
+!logs/.gitkeep
+
+# Runtime lock files
+*.lock
+*.lock.json

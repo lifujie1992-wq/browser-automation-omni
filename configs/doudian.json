@@ -1,0 +1,35 @@
+{
+  "platform": "doudian",
+  "target_host": "fxg.jinritemai.com",
+  "preferred_paths": [
+    "/ffa/g/create",
+    "/ffa/mshop/homepage/index"
+  ],
+  "metric_labels": {
+    "用户支付金额": "user_pay_amount",
+    "成交订单数": "order_count",
+    "退款金额(支付时间)": "refund_amount_by_pay_time",
+    "商品曝光人数": "product_exposure_users",
+    "商品点击人数": "product_click_users",
+    "成交人数": "buyer_count",
+    "客单价": "avg_order_value",
+    "成交金额": "transaction_amount",
+    "支出金额": "expense_amount",
+    "退款订单数(支付时间)": "refund_orders_by_pay_time",
+    "退款金额(退款时间)": "refund_amount_by_refund_time",
+    "退款订单数(退款时间)": "refund_orders_by_refund_time",
+    "商品曝光-点击转化率(人数)": "exposure_to_click_rate",
+    "商品点击-成交转化率(人数)": "click_to_order_rate",
+    "结算金额": "settlement_amount",
+    "投放消耗": "ad_spend",
+    "投放费比": "ad_cost_ratio"
+  },
+  "risk_words": {
+    "high": ["发布", "提交", "删除", "移除", "付款", "支付", "授权", "同意授权", "确认退款", "改价", "价格", "库存", "预算", "出价", "开启", "暂停", "批量", "结算", "提现"],
+    "money": ["千川", "推广", "投放", "预算", "出价", "ROI", "ROAS", "消耗", "账户资金", "保证金", "提现"],
+    "login": ["登录", "扫码", "验证码", "密码", "短信", "手机验证", "设备验证"],
+    "query": ["搜索", "查询", "筛选", "过滤", "日期", "时间", "关键词", "订单号", "手机号"],
+    "dashboard": ["首页", "数据", "罗盘", "看板", "经营", "分析", "报表", "概览", "排行", "趋势"],
+    "form": ["新建", "创建", "编辑", "填写", "上传", "发布商品", "商品发布", "素材"]
+  }
+}

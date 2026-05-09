@@ -1,0 +1,1967 @@
+{
+  "profile": "doudian",
+  "generated_at": "2026-05-09T11:52:49",
+  "page": {
+    "title": "首页",
+    "url": "https://fxg.jinritemai.com/ffa/mshop/homepage/index",
+    "login_hints": [
+      "短信"
+    ]
+  },
+  "summary": {
+    "total_entrances": 107,
+    "high_risk_count": 3,
+    "medium_risk_count": 8,
+    "types": {
+      "dashboard": 10,
+      "query": 2,
+      "navigation": 66,
+      "form": 3,
+      "action": 13,
+      "form_field": 1,
+      "unknown": 12
+    }
+  },
+  "entrances": [
+    {
+      "name": "精选联盟 去推广 多样化推广方式，灵活佣金设置 找合作 海量达人资源，精准匹配、高效建联 管合作 高效管理达人，跟进合作进度 看数据 联盟经营数据分析，助力提升经营水平",
+      "type": "dashboard",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "div:text(\"精选联盟 去推广 多样化推广方式，灵活佣金设置 找合作 海量\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "抖店 妙手入口在哪里 巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订单 推广管理 支持广告投放计划的复制、编辑等操作 广告数据 展示广告账户整体数据，分营销目标及详细数据 资金管理 可快",
+      "type": "dashboard",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "#fxg-pc-header",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "抖店 妙手入口在哪里 巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订单 推广管理 支持广告投放计划的复制、编辑等操作 广告数据 展示广告账户整体数据，分营销目标及详细数据 资金管理 可快",
+      "type": "dashboard",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "div:text(\"抖店 妙手入口在哪里 巨量千川 去投广告 设置广告投放营销目\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订单 推广管理 支持广告投放计划的复制、编辑等操作 广告数据 展示广告账户整体数据，分营销目标及详细数据 资金管理 可快速查看、充值广告投放账",
+      "type": "dashboard",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "div:text(\"巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "电商罗盘",
+      "type": "dashboard",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"电商罗盘\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "历史报表",
+      "type": "dashboard",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"历史报表\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/fxg-bill/history-report"
+    },
+    {
+      "name": "查看全部分析",
+      "type": "dashboard",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"查看全部分析\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "服务市场 服务市场 进入服务市场首页选购服务 已购服务 管理和使用已订购的服务 我的订单 查看我在服务市场的交易订单",
+      "type": "dashboard",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"服务市场 服务市场 进入服务市场首页选购服务 已购服务 管理\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "电商罗盘 经营概览 实时监控全店流量、成交、退款、体验数据表现 货架运营 识别问题商品，落地优化动作，提升商品卡销量 内容运营 实时直播大屏及一站式数据诊断，提升直播成交 服务体验 诊断服务问题，提升",
+      "type": "dashboard",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"电商罗盘 经营概览 实时监控全店流量、成交、退款、体验数据表\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "学习中心 规则中心 担心违规受罚？电商规则看这里 功能中心 新功能怎么操作？查看电商功能大全 课程中心 对电商缺乏了解？经营系列课在此 案例中心 赚钱灵感消失？来取同行生意经 最新直播 平台官方讲师直",
+      "type": "dashboard",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"学习中心 规则中心 担心违规受罚？电商规则看这里 功能中心 \")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "搜索运营",
+      "type": "query",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"搜索运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/mcompass/search"
+    },
+    {
+      "name": "AI助手 常用 管理 订单管理 售后工作台 商品管理 评价管理 商家体验分 违规管理 店铺保障 商品素材 流量 流量运营 搜索运营 短视频运营 AI智能成片 直播管理 图文运营 商城运营 推荐卡运营",
+      "type": "query",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"AI助手 常用 管理 订单管理 售后工作台 商品管理 评价管\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "千川推广",
+      "type": "navigation",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "a:text(\"千川推广\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/ad/promotion-v2?utm_source=qianchuan-origin-entrance&utm_medium=doudian-pc&utm_campaign=tuiguangtab"
+    },
+    {
+      "name": "联盟推广",
+      "type": "navigation",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "a:text(\"联盟推广\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/buyin/shop_smallshop"
+    },
+    {
+      "name": "库存管理",
+      "type": "navigation",
+      "risk": "high",
+      "risk_flags": [
+        "human_confirm_required"
+      ],
+      "selector": "a:text(\"库存管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/g/stock-manage/list"
+    },
+    {
+      "name": "子账号授权",
+      "type": "navigation",
+      "risk": "high",
+      "risk_flags": [
+        "human_confirm_required"
+      ],
+      "selector": "a:text(\"子账号授权\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/w/subaccount/apply"
+    },
+    {
+      "name": "保证金账户",
+      "type": "navigation",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "a:text(\"保证金账户\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/content/shop_deposit"
+    },
+    {
+      "name": "优惠券",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"优惠券\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/marketing/coupon/home"
+    },
+    {
+      "name": "订单管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"订单管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/morder/order/list"
+    },
+    {
+      "name": "商品管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商品管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/g/list"
+    },
+    {
+      "name": "评价管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"评价管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/maftersale/comment"
+    },
+    {
+      "name": "违规管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"违规管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/govern-guarantee/regulation"
+    },
+    {
+      "name": "店铺保障",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"店铺保障\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/govern-guarantee/overview"
+    },
+    {
+      "name": "直播管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"直播管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/content-tool/shop-live"
+    },
+    {
+      "name": "图文运营",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"图文运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/content-tool/image-text-operation"
+    },
+    {
+      "name": "商城运营",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商城运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/growth-common/growth-shelf"
+    },
+    {
+      "name": "活动广场",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"活动广场\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/merchant/campaign-square"
+    },
+    {
+      "name": "秒杀报名",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"秒杀报名\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/merchant/sec-kill"
+    },
+    {
+      "name": "优价推手",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"优价推手\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/priceTool/optimizePrice"
+    },
+    {
+      "name": "营销工具",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"营销工具\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/marketing/home"
+    },
+    {
+      "name": "单品直降",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"单品直降\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/marketing/tools/limitsales"
+    },
+    {
+      "name": "营销管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"营销管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/marketing/discount-query"
+    },
+    {
+      "name": "卡券管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"卡券管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/morder/o2o/poi-verify"
+    },
+    {
+      "name": "发货中心",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"发货中心\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/morder/logistics/ewaybill-delivery"
+    },
+    {
+      "name": "订单报备",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"订单报备\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/govern-order-report/order_entry"
+    },
+    {
+      "name": "包裹中心",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"包裹中心\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/logistics/parcelCenter"
+    },
+    {
+      "name": "物流工具",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"物流工具\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/morder/logistics/freight-list"
+    },
+    {
+      "name": "电子面单",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"电子面单\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/logistics-project/eBill/landing"
+    },
+    {
+      "name": "物流服务",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"物流服务\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/logistics-project/logistics-service/main"
+    },
+    {
+      "name": "物流诊断",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"物流诊断\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/logistics-project/diagnosis/index"
+    },
+    {
+      "name": "服务工单",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"服务工单\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/task-order/service"
+    },
+    {
+      "name": "小额打款",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"小额打款\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/maftersale/aftersale/part-pay"
+    },
+    {
+      "name": "商品诊断",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商品诊断\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/g/diagnose"
+    },
+    {
+      "name": "商机中心",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商机中心\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/bu/NewBusinessCenter"
+    },
+    {
+      "name": "商品成长",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商品成长\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/pg/ProductGrowthCenter?source=spcz_bd_menu_pc"
+    },
+    {
+      "name": "商品工具",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商品工具\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/menu_tools/goods_tools"
+    },
+    {
+      "name": "源头好货",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"源头好货\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/distribution-selected/?from=ddpc.menu"
+    },
+    {
+      "name": "竞拍管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"竞拍管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/industry-auction/?from=ddpc.menu"
+    },
+    {
+      "name": "店铺管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"店铺管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/grs-new/qualification/common-tools"
+    },
+    {
+      "name": "申诉中心",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"申诉中心\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/govern-guarantee/appeal"
+    },
+    {
+      "name": "店铺装修",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"店铺装修\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/shop/decorate/selection/list"
+    },
+    {
+      "name": "店铺诊断",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"店铺诊断\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/growth-gov-shop/shop-risk?no_tab=1"
+    },
+    {
+      "name": "商家权益",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商家权益\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/growth-merchant/rights?source=fxg-menu"
+    },
+    {
+      "name": "保险服务",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"保险服务\")",
+      "tag": "a",
+      "role": "",
+      "href": "https://center.baohuaxia.com/?entry_from=701"
+    },
+    {
+      "name": "申请关店",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"申请关店\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/gov/closeV2"
+    },
+    {
+      "name": "用户运营",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"用户运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/mvip/consumer"
+    },
+    {
+      "name": "用户触达",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"用户触达\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/mvip/operation/plan"
+    },
+    {
+      "name": "会员运营",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"会员运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/mvip/member"
+    },
+    {
+      "name": "会员权益",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"会员权益\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/mvip/rights"
+    },
+    {
+      "name": "账户中心",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"账户中心\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/fund-control/account-center"
+    },
+    {
+      "name": "抖店贷款",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"抖店贷款\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/ml/home"
+    },
+    {
+      "name": "账单管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"账单管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/fxg-bill/fund-detail-bill"
+    },
+    {
+      "name": "返佣管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"返佣管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/p-new/rebate-center"
+    },
+    {
+      "name": "发票管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"发票管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/m-invoice/merchant-invoice"
+    },
+    {
+      "name": "售后工作台",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"售后工作台\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/merchant-aftersale-workbench/aftersale/list"
+    },
+    {
+      "name": "商家体验分",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商家体验分\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/eco/experience-score?source=fxg-menu"
+    },
+    {
+      "name": "短视频运营",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"短视频运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/content-tool/short-video"
+    },
+    {
+      "name": "推荐卡运营",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"推荐卡运营\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/recommend-card/home"
+    },
+    {
+      "name": "超值购报名",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"超值购报名\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/merchant/super-sale"
+    },
+    {
+      "name": "消费者权益",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"消费者权益\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/maftersale/privileges"
+    },
+    {
+      "name": "售后小助手",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"售后小助手\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/maftersale/aftersale/assistant/multi-assist"
+    },
+    {
+      "name": "渠道品管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"渠道品管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/g/channel-goods/list"
+    },
+    {
+      "name": "子账号管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"子账号管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/w/subaccount/employee"
+    },
+    {
+      "name": "AI智能成片",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"AI智能成片\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/content-tool/ai-generate-video?from=doudian.caidan"
+    },
+    {
+      "name": "快递拦截管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"快递拦截管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/logistics/logistics/interceptModule"
+    },
+    {
+      "name": "售后挽单助手",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"售后挽单助手\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/maftersale/aftersale/redeem/assistant"
+    },
+    {
+      "name": "抖音账号管理",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"抖音账号管理\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/w/bind/list"
+    },
+    {
+      "name": "external_feedback_form",
+      "type": "navigation",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"external_feedback_form\")",
+      "tag": "a",
+      "role": "",
+      "href": "https://example.invalid/redacted-feedback-form"
+    },
+    {
+      "name": "商品素材",
+      "type": "form",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商品素材\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/creative/material-production"
+    },
+    {
+      "name": "商品创建",
+      "type": "form",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "a:text(\"商品创建\")",
+      "tag": "a",
+      "role": "",
+      "href": "/ffa/g/create"
+    },
+    {
+      "name": "立即新建",
+      "type": "form",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"立即新建\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "批量设置",
+      "type": "action",
+      "risk": "high",
+      "risk_flags": [
+        "human_confirm_required"
+      ],
+      "selector": "button:text(\"批量设置\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "1",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"1\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "2",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"2\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "全部",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"全部\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "去获得",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"去获得\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "去报名",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"去报名\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "下一页",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"下一页\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "立即优化",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"立即优化\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "立即报名",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"立即报名\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "配置挽单助手",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"配置挽单助手\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "跳转到第1页",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"跳转到第1页\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "跳转到第2页",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "button:text(\"跳转到第2页\")",
+      "tag": "button",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "close-circle",
+      "type": "action",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "span:text(\"close-circle\")",
+      "tag": "span",
+      "role": "button",
+      "href": ""
+    },
+    {
+      "name": "#rc_select_0",
+      "type": "form_field",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "#rc_select_0",
+      "tag": "input",
+      "role": "combobox",
+      "href": ""
+    },
+    {
+      "name": "巨量千川",
+      "type": "unknown",
+      "risk": "medium",
+      "risk_flags": [
+        "money_related"
+      ],
+      "selector": "div:text(\"巨量千川\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "7",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"7\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "1",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"1\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "1",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "span:text(\"1\")",
+      "tag": "span",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "1",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "sup:text(\"1\")",
+      "tag": "sup",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "1",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "p:text(\"1\")",
+      "tag": "p",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "抖店",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "#fxg-pc-header-title",
+      "tag": "h1",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "精选联盟",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"精选联盟\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "服务市场",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"服务市场\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "学习中心",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"学习中心\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "妙手入口在哪里",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "#fxg-header-search-input",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    },
+    {
+      "name": "7 1 黑色草莓bingbing",
+      "type": "unknown",
+      "risk": "read_only",
+      "risk_flags": [],
+      "selector": "div:text(\"7 1 黑色草莓bingbing\")",
+      "tag": "div",
+      "role": "",
+      "href": ""
+    }
+  ],
+  "grouped": {
+    "dashboard": [
+      {
+        "name": "精选联盟 去推广 多样化推广方式，灵活佣金设置 找合作 海量达人资源，精准匹配、高效建联 管合作 高效管理达人，跟进合作进度 看数据 联盟经营数据分析，助力提升经营水平",
+        "type": "dashboard",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "div:text(\"精选联盟 去推广 多样化推广方式，灵活佣金设置 找合作 海量\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "抖店 妙手入口在哪里 巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订单 推广管理 支持广告投放计划的复制、编辑等操作 广告数据 展示广告账户整体数据，分营销目标及详细数据 资金管理 可快",
+        "type": "dashboard",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "#fxg-pc-header",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "抖店 妙手入口在哪里 巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订单 推广管理 支持广告投放计划的复制、编辑等操作 广告数据 展示广告账户整体数据，分营销目标及详细数据 资金管理 可快",
+        "type": "dashboard",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "div:text(\"抖店 妙手入口在哪里 巨量千川 去投广告 设置广告投放营销目\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订单 推广管理 支持广告投放计划的复制、编辑等操作 广告数据 展示广告账户整体数据，分营销目标及详细数据 资金管理 可快速查看、充值广告投放账",
+        "type": "dashboard",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "div:text(\"巨量千川 去投广告 设置广告投放营销目标及推广方式等，提升订\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "电商罗盘",
+        "type": "dashboard",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"电商罗盘\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "历史报表",
+        "type": "dashboard",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"历史报表\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/fxg-bill/history-report"
+      },
+      {
+        "name": "查看全部分析",
+        "type": "dashboard",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"查看全部分析\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "服务市场 服务市场 进入服务市场首页选购服务 已购服务 管理和使用已订购的服务 我的订单 查看我在服务市场的交易订单",
+        "type": "dashboard",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"服务市场 服务市场 进入服务市场首页选购服务 已购服务 管理\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "电商罗盘 经营概览 实时监控全店流量、成交、退款、体验数据表现 货架运营 识别问题商品，落地优化动作，提升商品卡销量 内容运营 实时直播大屏及一站式数据诊断，提升直播成交 服务体验 诊断服务问题，提升",
+        "type": "dashboard",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"电商罗盘 经营概览 实时监控全店流量、成交、退款、体验数据表\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "学习中心 规则中心 担心违规受罚？电商规则看这里 功能中心 新功能怎么操作？查看电商功能大全 课程中心 对电商缺乏了解？经营系列课在此 案例中心 赚钱灵感消失？来取同行生意经 最新直播 平台官方讲师直",
+        "type": "dashboard",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"学习中心 规则中心 担心违规受罚？电商规则看这里 功能中心 \")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      }
+    ],
+    "query": [
+      {
+        "name": "搜索运营",
+        "type": "query",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"搜索运营\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/mcompass/search"
+      },
+      {
+        "name": "AI助手 常用 管理 订单管理 售后工作台 商品管理 评价管理 商家体验分 违规管理 店铺保障 商品素材 流量 流量运营 搜索运营 短视频运营 AI智能成片 直播管理 图文运营 商城运营 推荐卡运营",
+        "type": "query",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"AI助手 常用 管理 订单管理 售后工作台 商品管理 评价管\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      }
+    ],
+    "navigation": [
+      {
+        "name": "千川推广",
+        "type": "navigation",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "a:text(\"千川推广\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/ad/promotion-v2?utm_source=qianchuan-origin-entrance&utm_medium=doudian-pc&utm_campaign=tuiguangtab"
+      },
+      {
+        "name": "联盟推广",
+        "type": "navigation",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "a:text(\"联盟推广\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/buyin/shop_smallshop"
+      },
+      {
+        "name": "库存管理",
+        "type": "navigation",
+        "risk": "high",
+        "risk_flags": [
+          "human_confirm_required"
+        ],
+        "selector": "a:text(\"库存管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/g/stock-manage/list"
+      },
+      {
+        "name": "子账号授权",
+        "type": "navigation",
+        "risk": "high",
+        "risk_flags": [
+          "human_confirm_required"
+        ],
+        "selector": "a:text(\"子账号授权\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/w/subaccount/apply"
+      },
+      {
+        "name": "保证金账户",
+        "type": "navigation",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "a:text(\"保证金账户\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/content/shop_deposit"
+      },
+      {
+        "name": "优惠券",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"优惠券\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/marketing/coupon/home"
+      },
+      {
+        "name": "订单管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"订单管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/morder/order/list"
+      },
+      {
+        "name": "商品管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商品管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/g/list"
+      },
+      {
+        "name": "评价管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"评价管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/maftersale/comment"
+      },
+      {
+        "name": "违规管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"违规管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/govern-guarantee/regulation"
+      },
+      {
+        "name": "店铺保障",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"店铺保障\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/govern-guarantee/overview"
+      },
+      {
+        "name": "直播管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"直播管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/content-tool/shop-live"
+      },
+      {
+        "name": "图文运营",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"图文运营\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/content-tool/image-text-operation"
+      },
+      {
+        "name": "商城运营",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商城运营\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/growth-common/growth-shelf"
+      },
+      {
+        "name": "活动广场",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"活动广场\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/merchant/campaign-square"
+      },
+      {
+        "name": "秒杀报名",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"秒杀报名\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/merchant/sec-kill"
+      },
+      {
+        "name": "优价推手",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"优价推手\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/priceTool/optimizePrice"
+      },
+      {
+        "name": "营销工具",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"营销工具\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/marketing/home"
+      },
+      {
+        "name": "单品直降",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"单品直降\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/marketing/tools/limitsales"
+      },
+      {
+        "name": "营销管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"营销管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/marketing/discount-query"
+      },
+      {
+        "name": "卡券管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"卡券管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/morder/o2o/poi-verify"
+      },
+      {
+        "name": "发货中心",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"发货中心\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/morder/logistics/ewaybill-delivery"
+      },
+      {
+        "name": "订单报备",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"订单报备\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/govern-order-report/order_entry"
+      },
+      {
+        "name": "包裹中心",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"包裹中心\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/logistics/parcelCenter"
+      },
+      {
+        "name": "物流工具",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"物流工具\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/morder/logistics/freight-list"
+      },
+      {
+        "name": "电子面单",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"电子面单\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/logistics-project/eBill/landing"
+      },
+      {
+        "name": "物流服务",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"物流服务\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/logistics-project/logistics-service/main"
+      },
+      {
+        "name": "物流诊断",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"物流诊断\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/logistics-project/diagnosis/index"
+      },
+      {
+        "name": "服务工单",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"服务工单\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/task-order/service"
+      },
+      {
+        "name": "小额打款",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"小额打款\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/maftersale/aftersale/part-pay"
+      },
+      {
+        "name": "商品诊断",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商品诊断\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/g/diagnose"
+      },
+      {
+        "name": "商机中心",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商机中心\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/bu/NewBusinessCenter"
+      },
+      {
+        "name": "商品成长",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商品成长\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/pg/ProductGrowthCenter?source=spcz_bd_menu_pc"
+      },
+      {
+        "name": "商品工具",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商品工具\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/menu_tools/goods_tools"
+      },
+      {
+        "name": "源头好货",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"源头好货\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/distribution-selected/?from=ddpc.menu"
+      },
+      {
+        "name": "竞拍管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"竞拍管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/industry-auction/?from=ddpc.menu"
+      },
+      {
+        "name": "店铺管理",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"店铺管理\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/grs-new/qualification/common-tools"
+      },
+      {
+        "name": "申诉中心",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"申诉中心\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/govern-guarantee/appeal"
+      },
+      {
+        "name": "店铺装修",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"店铺装修\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/shop/decorate/selection/list"
+      },
+      {
+        "name": "店铺诊断",
+        "type": "navigation",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"店铺诊断\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/growth-gov-shop/shop-risk?no_tab=1"
+      }
+    ],
+    "form": [
+      {
+        "name": "商品素材",
+        "type": "form",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商品素材\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/creative/material-production"
+      },
+      {
+        "name": "商品创建",
+        "type": "form",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "a:text(\"商品创建\")",
+        "tag": "a",
+        "role": "",
+        "href": "/ffa/g/create"
+      },
+      {
+        "name": "立即新建",
+        "type": "form",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"立即新建\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      }
+    ],
+    "action": [
+      {
+        "name": "批量设置",
+        "type": "action",
+        "risk": "high",
+        "risk_flags": [
+          "human_confirm_required"
+        ],
+        "selector": "button:text(\"批量设置\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "1",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"1\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "2",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"2\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "全部",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"全部\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "去获得",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"去获得\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "去报名",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"去报名\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "下一页",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"下一页\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "立即优化",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"立即优化\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "立即报名",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"立即报名\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "配置挽单助手",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"配置挽单助手\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "跳转到第1页",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"跳转到第1页\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "跳转到第2页",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "button:text(\"跳转到第2页\")",
+        "tag": "button",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "close-circle",
+        "type": "action",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "span:text(\"close-circle\")",
+        "tag": "span",
+        "role": "button",
+        "href": ""
+      }
+    ],
+    "form_field": [
+      {
+        "name": "#rc_select_0",
+        "type": "form_field",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "#rc_select_0",
+        "tag": "input",
+        "role": "combobox",
+        "href": ""
+      }
+    ],
+    "unknown": [
+      {
+        "name": "巨量千川",
+        "type": "unknown",
+        "risk": "medium",
+        "risk_flags": [
+          "money_related"
+        ],
+        "selector": "div:text(\"巨量千川\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "7",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"7\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "1",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"1\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "1",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "span:text(\"1\")",
+        "tag": "span",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "1",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "sup:text(\"1\")",
+        "tag": "sup",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "1",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "p:text(\"1\")",
+        "tag": "p",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "抖店",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "#fxg-pc-header-title",
+        "tag": "h1",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "精选联盟",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"精选联盟\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "服务市场",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"服务市场\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "学习中心",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"学习中心\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "妙手入口在哪里",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "#fxg-header-search-input",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      },
+      {
+        "name": "7 1 黑色草莓bingbing",
+        "type": "unknown",
+        "risk": "read_only",
+        "risk_flags": [],
+        "selector": "div:text(\"7 1 黑色草莓bingbing\")",
+        "tag": "div",
+        "role": "",
+        "href": ""
+      }
+    ]
+  }
+}
