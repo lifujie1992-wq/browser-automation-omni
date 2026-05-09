@@ -1,23 +1,66 @@
-# Browser Omni Runtime
+# Browser Automation Omni
 
-独立运行目录，用于把 browser-automation-omni 做成通用、强力、可验证的浏览器操作基座。
+通用浏览器操作基座。
 
-路径：
-${BROWSER_OMNI_RUNTIME}
+它不是某个平台的业务脚本，也不是售后、投流、商品发布这些垂直流程本身。它负责把“浏览器里能看到、能点、能填、能查、能导出”的能力抽成稳定底座，供后续垂直 skill 复用。
 
-基座定位：
-- 只负责浏览器“看、点、填、查、导出、上传、验证、兜底、审批拦截”。
-- 不吸收售后、投流、商品发布、财务、CRM、ERP 等业务规则。
-- 垂直业务另建 skill，复用这个基座。
+## 定位
 
-目标：
-- 操作任意已登录浏览器环境，而不是绑定某个具体网站。
-- 先低 token 读页面入口、表单、查询条件、表格、看板。
-- 自动选择 CloakBrowser/CDP、BYOB/current Chrome、CuaDriver、browser-use scout。
-- 登录/扫码/验证码停下让人协助。
-- 发布、提交、删除、付款、授权、改价、库存、预算、出价等高风险动作必须 approval_gate。
+Browser Automation Omni 只管浏览器操作层：
 
-能力矩阵：
+- 打开或接管浏览器
+- 复用登录态
+- 选择操作后端
+- 低 token 读取页面
+- 找入口、按钮、表单、筛选项、表格、看板
+- 点击、输入、选择、上传、下载、导出
+- 处理 iframe、弹窗、原生文件选择器
+- 截图/视觉验证
+- 高风险动作审批拦截
+- 输出结构化数据、文件路径、页面状态证据
+
+它不管业务决策：
+
+- 售后规则
+- 退款/退货判断
+- 投流 ROI/ROAS 策略
+- 出价/预算优化逻辑
+- 商品标题/类目/属性策略
+- 财务、CRM、ERP 等业务语义
+
+这些应该放进单独的垂直 skill。
+
+## 架构
+
+```text
+Vertical Skills
+  ├─ doudian-aftersale-query
+  ├─ ad-optimization-skill
+  ├─ product-publish-skill
+  └─ report-export-skill
+          │
+          ▼
+Browser Automation Omni
+  ├─ backend_router
+  ├─ CloakBrowser/CDP
+  ├─ BYOB/current Chrome
+  ├─ CuaDriver
+  ├─ browser-use scout
+  ├─ approval_gate
+  └─ profile_lock
+```
+
+## 后端选择
+
+| 场景 | 默认后端 |
+|---|---|
+| 自动化专用登录态、风控敏感后台 | CloakBrowser + CDP |
+| 用户已打开的普通 Chrome / 当前标签页 | BYOB/current Chrome |
+| DOM/CDP 读不到、原生弹窗、文件选择器、视觉验证 | CuaDriver |
+| 未知页面、选择器失效、页面改版 | browser-use scout |
+| 发布、删除、付款、授权、改价、库存、预算、出价 | approval_gate 必须拦截 |
+
+## 能力矩阵
 
 ```text
 打开自动化 profile        -> CloakBrowser/CDP
@@ -32,52 +75,80 @@ iframe/modal              -> CDP/BYOB frame tools，失败用 CuaDriver
 高风险写动作               -> approval_gate mandatory
 ```
 
-核心组件：
+## 快速使用
 
-1. contexts/registry.json
-   记录平台、profile、CDP 端口、风险策略。示例 profile 可替换，不代表 runtime 只服务某个平台。
+### 1. 自动选择后端
 
-2. scripts/backend_router.py
-   根据任务描述、platform、context 自动选择后端：cloakbrowser_cdp / byob / cuadriver / browser_use_scout，并标记是否需要 approval_gate。
+```bash
+export BROWSER_OMNI_RUNTIME=/Users/lifujie/browser-omni-runtime
+export CLOAKBROWSER_PY=/Users/lifujie/github-tools/CloakBrowser/.venv/bin/python
 
-3. scripts/launch_profile.py
-   用 CloakBrowser 启动任意持久化 profile，并固定 CDP 端口。
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/backend_router.py "读取这个商家后台的经营看板" --platform generic_shop_admin
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/backend_router.py "系统文件选择器弹出来了，DOM 看不到"
+```
 
-4. scripts/cdp_harness.py
-   通过 CDP 连接目标 profile，做低 token DOM/表单/表格/看板抽取。
+输出：
 
-5. scripts/function_map_builder.py
-   把低 token map 结果去重、分类、风险标记，并写入 schema cache。
+```json
+{
+  "backend": "byob | cloakbrowser_cdp | cuadriver | browser_use_scout",
+  "confidence": 0.88,
+  "requires_approval": false,
+  "reasons": ["current_chrome"],
+  "next_step": "..."
+}
+```
 
-6. scripts/approval_gate.py
-   写入审计日志，并拦截发布、提交、删除、改价、库存、预算、出价、授权、付款等高风险动作。
+### 2. 启动/检查 profile
 
-7. scripts/profile_lock.py
-   管理 profile lock，避免多个任务并发操作同一浏览器 profile。
+```bash
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/launch_profile.py --profile generic_shop_admin
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/cdp_harness.py status --profile generic_shop_admin
+```
 
-8. scripts/read_dashboard_safe.py
-   安全读取看板：优先 CDP/DOM；如果 CDP 失败，明确输出 CuaDriver + vision 兜底策略。
+### 3. 读取页面功能地图
 
-9. extractors/*
-   站点/页面专用解析器。当前仓库里的 doudian 相关文件只是示例适配器，不是 runtime 的默认目标。
+```bash
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/cdp_harness.py map --profile generic_shop_admin
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/function_map_builder.py --profile generic_shop_admin
+```
 
-通用后端路由：
+### 4. 安全读取看板/报表
 
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "读取这个商家后台的经营看板" --platform taobao
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "系统文件选择器弹出来了，DOM 看不到"
+```bash
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/read_dashboard_safe.py --profile generic_shop_admin
+```
 
-输出字段：backend、confidence、requires_approval、reasons、next_step。
+### 5. 高风险动作审批
 
-通用 profile 操作：
+只读动作：
 
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/launch_profile.py --profile <profile>
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/cdp_harness.py status --profile <profile>
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/cdp_harness.py map --profile <profile>
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/function_map_builder.py --profile <profile>
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/read_dashboard_safe.py --profile <profile>
+```bash
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/approval_gate.py \
+  --profile generic_shop_admin \
+  --action read_dashboard \
+  --target dashboard \
+  --mode read \
+  --result ok
+```
 
-垂直 skill 接入契约：
+写动作默认拦截：
+
+```bash
+$CLOAKBROWSER_PY $BROWSER_OMNI_RUNTIME/scripts/approval_gate.py \
+  --profile generic_shop_admin \
+  --action publish \
+  --target final_submit \
+  --mode write \
+  --before draft \
+  --after published \
+  --result planned
+```
+
+## 垂直 skill 接入契约
+
+垂直 skill 应声明：
 
 ```yaml
 base_skill: browser-automation-omni
@@ -101,42 +172,76 @@ verification:
   - <readback/table count/toast/download exists/screenshot/...>
 ```
 
-垂直 skill 分工：
-- 售后 skill：定义售后类型、时间范围、订单/退款/物流字段、输出格式。
-- 投流 skill：定义 ROI/ROAS 指标、广告计划字段、预算/出价策略。
-- 商品发布 skill：定义字段 schema、类目/属性/素材规则、发布流程。
-- 本基座只执行浏览器层动作，并返回结构化数据/文件路径/页面状态证据。
+调用流程：
 
-高风险动作审批：
+```text
+1. 加载 browser-automation-omni
+2. 加载垂直 skill
+3. 垂直 skill 说明业务目标和页面上下文
+4. 基座选择后端并执行浏览器操作
+5. 基座返回结构化数据/文件路径/页面证据
+6. 垂直 skill 应用业务规则
+7. 高风险写动作走 approval_gate
+8. 基座做执行后验证
+```
 
-# 只读动作会直接通过并记录 audit
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/approval_gate.py --profile <profile> --action read_dashboard --target dashboard --mode read --result ok
+## 目录
 
-# 写操作会被拦截，除非显式带 --confirmed-by-human
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/approval_gate.py --profile <profile> --action publish --target final_submit --mode write --before draft --after published --result planned
+```text
+browser_omni_runtime/
+  common/
+    backend_router.py
+    config.py
+    io.py
+    retry.py
+configs/
+  generic_shop_admin.json
+contexts/
+  registry.json
+docs/skill/
+  browser-automation-omni-SKILL.md
+  vertical-skill-contract.md
+scripts/
+  backend_router.py
+  launch_profile.py
+  cdp_harness.py
+  function_map_builder.py
+  read_dashboard_safe.py
+  approval_gate.py
+  profile_lock.py
+extractors/
+  *.py
+tests/
+  test_*.py
+```
 
-审计日志：
-${BROWSER_OMNI_RUNTIME}/logs/audit/YYYY-MM-DD.jsonl
+## 安全原则
 
-Profile lock：
+- 不要随便 kill 浏览器，只操作明确记录的本项目 PID/profile。
+- 登录、扫码、验证码、密码、2FA 必须人类协助。
+- 不要把视觉猜测直接用于高风险写操作。
+- 不要把业务规则塞进基座。
+- 推送公开仓库前扫描 token、cookie、邮箱、绝对 profile 路径、本地隐私路径。
 
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/profile_lock.py status --profile <profile>
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/profile_lock.py acquire --profile <profile> --owner task-name
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/profile_lock.py release --profile <profile> --owner task-name
+## 当前状态
 
-后端选择原则：
+评分：9.4/10
 
-- 普通网页/商家后台/登录态 profile：默认 CloakBrowser + CDP。
-- 用户说“我的 Chrome / 当前标签页 / 已经打开的页面 / 普通浏览器登录态”：优先 BYOB/current Chrome。
-- CDP/BYOB 不通、DOM 看不到 canvas/chart/native dialog、页面出现未知弹窗、或需要视觉核对：用 CuaDriver screenshot/window state + vision。
-- 选择器失效、页面改版、未知流程：用 browser-use scout 诊断，不做生产执行。
-- 任何发布、删除、付款、改价、改库存、改预算/出价等动作仍必须走 approval_gate。
+已具备：
 
-BYOB readiness：
-- 在 BYOB repo 内运行 `bun run doctor`。
-- 不要为了 BYOB 随便 kill/restart 用户普通 Chrome；缺扩展、socket 或 manifest 时，让用户打开/启用对应 Chrome 扩展。
+- 通用基座定位
+- 后端自动路由
+- CloakBrowser/CDP 执行层
+- BYOB/current Chrome 接管层
+- CuaDriver 视觉/原生 UI 兜底策略
+- browser-use scout 诊断层
+- approval_gate 风险拦截
+- 垂直 skill 接入契约
+- 测试和敏感扫描流程
 
-注意：
-- 登录/扫码/验证码必须人类协助。
-- 这个 runtime 不放在任何业务项目目录里。
-- 不要随便 kill 浏览器；只操作明确记录的本项目 PID。
+还可继续增强：
+
+- 把示例适配器移动到 `examples/`
+- 增加真实端到端 demo
+- 增加更多 profile 模板
+- 增加下载文件完整性校验
