@@ -10,7 +10,7 @@ from browser_omni_runtime.common.backend_router import choose_backend
 def main() -> int:
     parser = argparse.ArgumentParser(description='Choose browser automation backend for a task')
     parser.add_argument('task', help='Task description')
-    parser.add_argument('--platform', default=None, help='Optional platform name, e.g. doudian/taobao/1688')
+    parser.add_argument('--platform', default=None, help='Optional platform name, e.g. shop_admin/taobao/1688')
     parser.add_argument('--context-json', default='{}', help='Optional JSON context')
     args = parser.parse_args()
 

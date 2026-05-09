@@ -26,7 +26,7 @@ approval_gate         = blocks high-risk actions
 
 ## Do not default to BYOB when
 
-- The task is Doudian/Taobao/1688/shop/backend automation with a known CloakBrowser profile.
+- The task is a shop/admin/backend automation flow with a known CloakBrowser profile.
 - The task needs strict account/shop isolation or anti-fraud browser identity.
 - The action is publish/delete/payment/authorization/price/inventory/budget/bid without explicit approval.
 - A fixed CDP endpoint already exists for the intended automation profile.
@@ -65,7 +65,7 @@ For actual runtime use, call the router first:
 
 ```bash
 ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "打开抖店后台读取经营看板" --platform doudian
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "读取这个商家后台的经营看板" --platform taobao
 ```
 
 Router output fields:
@@ -113,9 +113,9 @@ Use BYOB:
 Use CloakBrowser/CDP instead:
 
 ```text
-"打开抖店后台"
-"淘宝商品发布页填字段"
-"1688 店铺后台查询订单"
+"打开某个商家后台"
+"商品发布页填字段"
+"店铺后台查询订单"
 ```
 
 Use CuaDriver after BYOB/CDP:

@@ -1,5 +1,25 @@
 {
   "profiles": {
+    "generic_shop_admin": {
+      "platform": "generic_shop_admin",
+      "display_name": "Generic Shop Admin",
+      "target_url": "https://example.com/admin",
+      "profile_dir": "${CLOAKBROWSER_PROFILE_DIR}/generic-shop-admin",
+      "cdp_port": 9222,
+      "locale": "zh-CN",
+      "timezone": "Asia/Shanghai",
+      "browser": "cloakbrowser",
+      "source_repo": "${CLOAKBROWSER_REPO}",
+      "venv_python": "${CLOAKBROWSER_PY}",
+      "risk_policy": {
+        "read_only_default": true,
+        "human_confirm_required": [
+          "login", "captcha", "password", "sms_code", "submit",
+          "publish", "delete", "price_change", "inventory_change",
+          "budget_change", "bid_change", "authorization", "payment"
+        ]
+      }
+    },
     "doudian": {
       "platform": "doudian",
       "display_name": "抖店后台",

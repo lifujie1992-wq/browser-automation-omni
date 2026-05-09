@@ -1,0 +1,15 @@
+{
+  "platform": "generic_shop_admin",
+  "target_host": "example.com",
+  "function_map": {
+    "high_risk_keywords": [
+      "发布", "提交", "删除", "付款", "支付", "授权",
+      "改价", "库存", "预算", "出价",
+      "publish", "submit", "delete", "payment", "authorize",
+      "price", "inventory", "budget", "bid"
+    ],
+    "query_keywords": ["搜索", "查询", "筛选", "导出", "search", "filter", "export"],
+    "form_keywords": ["新建", "编辑", "创建", "填写", "上传", "create", "edit", "upload"],
+    "dashboard_keywords": ["看板", "数据", "报表", "dashboard", "analytics", "report"]
+  }
+}

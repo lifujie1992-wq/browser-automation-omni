@@ -291,7 +291,7 @@ Run the router before touching the browser:
 
 ```bash
 ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
-${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "打开抖店后台读取经营看板" --platform doudian
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "读取这个商家后台的经营看板" --platform taobao
 ```
 
 Router output:
@@ -629,12 +629,12 @@ For high-risk actions:
 
 ```json
 {
-  "platform": "doudian",
+  "platform": "generic_shop_admin",
   "shop_name": "Example Shop",
-  "profile_name": "cloak-doudian-shop-a",
+  "profile_name": "cloak-shop-a",
   "target_url": "https://example.com/publish",
   "cdp_endpoint": "http://127.0.0.1:9222",
-  "schema_version": "doudian_publish_v1"
+  "schema_version": "product_publish_v1"
 }
 ```
 

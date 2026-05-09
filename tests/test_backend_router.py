@@ -10,7 +10,7 @@ def test_routes_current_chrome_request_to_byob():
 
 
 def test_routes_shop_backend_to_cloakbrowser_cdp():
-    decision = choose_backend("打开抖店后台，读取经营看板", platform="doudian")
+    decision = choose_backend("打开商家后台，读取经营看板", platform="shop_admin")
 
     assert decision.backend == "cloakbrowser_cdp"
     assert decision.requires_approval is False
