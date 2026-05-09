@@ -34,6 +34,9 @@ ${BROWSER_OMNI_RUNTIME}
 10. BYOB / current Chrome backend
    用 BYOB 接管用户已经打开的普通 Chrome；当任务依赖“当前标签页/我的 Chrome/普通浏览器登录态”时优先使用。详细说明见 docs/skill/byob-backend-integration.md。
 
+11. scripts/backend_router.py
+   根据任务描述、platform、context 自动选择后端：cloakbrowser_cdp / byob / cuadriver / browser_use_scout，并标记是否需要 approval_gate。
+
 抖店启动：
 
 ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/launch_profile.py --profile doudian
@@ -98,6 +101,14 @@ BYOB 启动时机：
 - 抖店、淘宝、1688 等店铺后台默认仍优先 CloakBrowser + CDP，除非用户明确要求普通 Chrome。
 - BYOB readiness 检查：在 BYOB repo 内运行 `bun run doctor`。
 - 不要为了 BYOB 随便 kill/restart 用户普通 Chrome；缺扩展、socket 或 manifest 时，让用户打开/启用对应 Chrome 扩展。
+
+后端自动路由：
+
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "打开抖店后台读取经营看板" --platform doudian
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "系统文件选择器弹出来了，DOM 看不到"
+
+输出字段：backend、confidence、requires_approval、reasons、next_step。
 
 注意：
 - 登录/扫码/验证码必须人类协助。

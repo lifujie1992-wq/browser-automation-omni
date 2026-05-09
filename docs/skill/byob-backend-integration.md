@@ -61,6 +61,25 @@ Do not kill or restart normal Chrome casually. If BYOB is not ready, report the 
 
 ## Runtime routing rule
 
+For actual runtime use, call the router first:
+
+```bash
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "打开抖店后台读取经营看板" --platform doudian
+```
+
+Router output fields:
+
+```text
+backend: cloakbrowser_cdp | byob | cuadriver | browser_use_scout
+confidence: routing confidence
+requires_approval: whether approval_gate/human confirmation is required
+reasons: matched routing signals
+next_step: recommended next operation
+```
+
+Rule order:
+
 ```text
 if user mentions normal Chrome/current tab/already-open page:
     use BYOB first

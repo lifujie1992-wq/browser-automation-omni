@@ -285,6 +285,33 @@ Bad browser-use tasks:
 - "Delete invalid products."
 - "Authorize this app."
 
+### Backend Selection Router
+
+Run the router before touching the browser:
+
+```bash
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "帮我看下当前 Chrome 这个标签页"
+${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/backend_router.py "打开抖店后台读取经营看板" --platform doudian
+```
+
+Router output:
+
+```text
+backend: cloakbrowser_cdp | byob | cuadriver | browser_use_scout
+confidence: routing confidence
+requires_approval: whether approval_gate/human confirmation is required
+reasons: matched routing signals
+next_step: recommended next operation
+```
+
+Routing priority:
+
+1. Visual/native/dialog/DOM-invisible state -> `cuadriver`.
+2. User's current normal Chrome/current tab -> `byob`.
+3. Commerce/admin backend or known platform -> `cloakbrowser_cdp`.
+4. Unknown page, selector drift, schema/failure diagnosis -> `browser_use_scout`.
+5. Publish/delete/payment/authorization/price/inventory/budget/bid -> keep selected backend but set `requires_approval=true`.
+
 ## Page Exploration Pattern
 
 Use the cheapest observation that answers the question. The assistant should discover a page like a human would, but with machine-readable, low-token probes.
