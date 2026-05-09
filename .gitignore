@@ -8,6 +8,9 @@ __pycache__/
 *.pyc
 .venv/
 
+# Environment files (user-specific paths, API keys)
+.env
+
 # Keep source scripts, docs, schemas, and context registry tracked intentionally.
 !logs/.gitkeep
 

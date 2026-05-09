@@ -185,6 +185,71 @@ verification:
 8. 基座做执行后验证
 ```
 
+## 安装与设置
+
+### 前置依赖
+
+- Python 3.10+
+- Playwright（附带 Chromium）
+
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/lifujie1992-wq/browser-automation-omni.git
+cd browser-automation-omni
+```
+
+### 2. 创建虚拟环境并安装依赖
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate    # Linux/macOS
+# .venv\Scripts\activate     # Windows
+pip install playwright
+python -m playwright install chromium
+```
+
+### 3. 设置环境变量
+
+```bash
+cp .env.example .env
+# 编辑 .env，将 BROWSER_OMNI_RUNTIME 指向你的项目路径
+source .env
+```
+
+### 4. （可选）安装 CloakBrowser
+
+部分脚本（`launch_profile.py`、`profile_lock.py`）需要 CloakBrowser：
+
+```bash
+mkdir -p $TOOLS_DIR
+git clone https://github.com/lifujie1992-wq/CloakBrowser.git $TOOLS_DIR/CloakBrowser
+cd $TOOLS_DIR/CloakBrowser
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+### Windows 用户说明
+
+> ⚠️ 本项目已对 Windows 做兼容处理。以下注意事项适用于 git-bash / MSYS2 环境：
+
+1. **Python 路径**：Windows 上 venv 的 Python 路径是 `.venv/Scripts/python.exe`，不是 `.venv/bin/python`。`config.py` 会自动检测平台处理。
+2. **文件锁**：`io.py` 使用跨平台文件锁（Windows 用 `msvcrt`，Unix 用 `fcntl`），已自动适配。
+3. **Playwright**：`python -m playwright install chromium` 在 Windows 上同样可用。
+4. **路径格式**：推荐使用正斜杠 `C:/Users/...` 而非反斜杠。
+5. **克隆失败处理**：如果 `git clone` 中途中断导致残留 `.git` 目录，可以手动删除 `rm -rf $TOOLS_DIR/CloakBrowser` 后重试。
+
+所有测试已在 Windows 上通过（16/16）。
+
+### 验证安装
+
+```bash
+source .venv/bin/activate    # 或 Windows: .venv\Scripts\activate
+export BROWSER_OMNI_RUNTIME=$(pwd)
+python -m pytest tests/ -v
+```
+
 ## 目录
 
 ```text

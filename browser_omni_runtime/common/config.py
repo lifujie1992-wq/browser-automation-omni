@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -31,13 +32,18 @@ def load_platform_config(platform: str) -> dict[str, Any]:
 def resolve_env_placeholders(value: str) -> str:
     # Preserve public repo placeholders while allowing local runtime execution.
     out = value
+    # Cross-platform venv python path
+    if sys.platform == 'win32':
+        _venv_python = str(Path.home() / 'github-tools' / 'CloakBrowser' / '.venv' / 'Scripts' / 'python.exe')
+    else:
+        _venv_python = str(Path.home() / 'github-tools' / 'CloakBrowser' / '.venv' / 'bin' / 'python')
     env_defaults = {
         'BROWSER_OMNI_RUNTIME': str(RUNTIME),
         'CLOAKBROWSER_HOME': str(Path.home() / '.cloakbrowser'),
         'CLOAKBROWSER_PROFILE_DIR': str(Path.home() / '.cloakbrowser' / 'profiles'),
         'TOOLS_DIR': str(Path.home() / 'github-tools'),
         'CLOAKBROWSER_REPO': str(Path.home() / 'github-tools' / 'CloakBrowser'),
-        'CLOAKBROWSER_PY': str(Path.home() / 'github-tools' / 'CloakBrowser' / '.venv' / 'bin' / 'python'),
+        'CLOAKBROWSER_PY': _venv_python,
     }
     for key, default in env_defaults.items():
         out = out.replace('${' + key + '}', os.environ.get(key, default))
