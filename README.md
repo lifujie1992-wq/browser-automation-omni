@@ -1,9 +1,14 @@
 # Browser Omni Runtime
 
-独立运行目录，用于把 browser-automation-omni 做成通用、强力、可验证的浏览器操作运行时。
+独立运行目录，用于把 browser-automation-omni 做成通用、强力、可验证的浏览器操作基座。
 
 路径：
 ${BROWSER_OMNI_RUNTIME}
+
+基座定位：
+- 只负责浏览器“看、点、填、查、导出、上传、验证、兜底、审批拦截”。
+- 不吸收售后、投流、商品发布、财务、CRM、ERP 等业务规则。
+- 垂直业务另建 skill，复用这个基座。
 
 目标：
 - 操作任意已登录浏览器环境，而不是绑定某个具体网站。
@@ -11,6 +16,21 @@ ${BROWSER_OMNI_RUNTIME}
 - 自动选择 CloakBrowser/CDP、BYOB/current Chrome、CuaDriver、browser-use scout。
 - 登录/扫码/验证码停下让人协助。
 - 发布、提交、删除、付款、授权、改价、库存、预算、出价等高风险动作必须 approval_gate。
+
+能力矩阵：
+
+```text
+打开自动化 profile        -> CloakBrowser/CDP
+接管普通 Chrome 当前页     -> BYOB/current Chrome
+读取页面入口/按钮/表单      -> CDP/BYOB minimal DOM
+填表/查询/筛选             -> CDP/BYOB handlers
+表格/卡片/看板提取          -> CDP/BYOB，必要时 CuaDriver/vision
+下载/导出报表              -> CDP/BYOB，原生保存弹窗用 CuaDriver
+上传文件/素材              -> CDP file input，原生文件选择器用 CuaDriver
+iframe/modal              -> CDP/BYOB frame tools，失败用 CuaDriver
+未知页面/选择器漂移         -> browser-use scout 只诊断
+高风险写动作               -> approval_gate mandatory
+```
 
 核心组件：
 
@@ -56,6 +76,36 @@ ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/cdp_harness.py status --profi
 ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/cdp_harness.py map --profile <profile>
 ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/function_map_builder.py --profile <profile>
 ${CLOAKBROWSER_PY} ${BROWSER_OMNI_RUNTIME}/scripts/read_dashboard_safe.py --profile <profile>
+
+垂直 skill 接入契约：
+
+```yaml
+base_skill: browser-automation-omni
+business_domain: <aftersale | ads | product_publish | report_export | crm | erp | finance | other>
+required_context:
+  platform: <site/platform>
+  profile: <browser profile or current Chrome requirement>
+  login_state: <required/optional>
+entrypoints:
+  - human_name: <入口名称>
+    route_hint: <menu/search/url/filter path>
+queries:
+  - name: <query name>
+    fields: [<keyword/date/status/...>]
+outputs:
+  - type: <json/table/csv/xlsx/screenshot>
+    schema: <fields or path convention>
+high_risk_actions:
+  - <publish/delete/payment/authorize/price/inventory/budget/bid/...>
+verification:
+  - <readback/table count/toast/download exists/screenshot/...>
+```
+
+垂直 skill 分工：
+- 售后 skill：定义售后类型、时间范围、订单/退款/物流字段、输出格式。
+- 投流 skill：定义 ROI/ROAS 指标、广告计划字段、预算/出价策略。
+- 商品发布 skill：定义字段 schema、类目/属性/素材规则、发布流程。
+- 本基座只执行浏览器层动作，并返回结构化数据/文件路径/页面状态证据。
 
 高风险动作审批：
 
